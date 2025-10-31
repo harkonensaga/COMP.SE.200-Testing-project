@@ -26,15 +26,16 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+    - name: Install dependencies
+      run: npm ci
 
-    - name: Build and Push Docker Image
-      uses: mr-smithers-excellent/docker-build-push@v4
-      with:
-        image: harkonensagat/comp.se.200-testing-project
-        registry: docker.io
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Build
+      run: npm run build --if-present
 
+    - name: Run tests
+      run: |
+        npm test
+        make test-coverage
+
+    - name: Coveralls
+      uses: coverallsapp/github-action@v2
