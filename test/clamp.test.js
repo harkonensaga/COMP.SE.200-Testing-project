@@ -1,29 +1,36 @@
+import { expect } from 'chai';
 import clamp from "../src/clamp.js";
 
-/*test("Value within range", () => {
-    expect(clamp(5, 1, 10)).toBe(5);
-})
+describe('clamp', () => {
+    it('value within range', () => {
+        expect(clamp(5, 1, 10)).to.equal(5);
+    });
 
-test("Value too large", () => {
-    expect(clamp(999, 1, 10)).toBe(10);
-})
+    it("Value within range", () => {
+        expect(clamp(5, 1, 10)).to.equal(5);
+    });
 
-test("Negative value", () => {
-    expect(clamp(-5, 1, 10)).toBe(1);
-})
+    it("Value too large", () => {
+        expect(clamp(999, 1, 10)).to.equal(10);
+    });
 
-test("Infinity", () => {
-    expect(clamp(Infinity, 1, 10)).toBe(10);
-})
+    it("Negative value", () => {
+        expect(clamp(-5, 1, 10)).to.equal(1);
+    });
 
-test("0 size range", () => {
-    expect(clamp(0, 5, 5)).toBe(5);
-})
+    it("Infinity", () => {
+        expect(clamp(Infinity, 1, 10)).to.equal(10);
+    });
 
-test("Negative size range", () => {
-    expect(clamp(0, 10, 1)).toBe(null);
-})
+    it("0 size range", () => {
+        expect(clamp(0, 5, 5)).to.equal(5);
+    });
 
-test("Negative size range 2", () => {
-    expect(clamp(20, 10, 1)).toBe(null);
-})*/
+    it("Negative size range", () => {
+        expect(clamp(0, 10, 1)).to.equal(null);
+    });
+
+    it("Negative size range 2", () => {
+        expect(clamp(20, 10, 1)).to.equal(null);
+    });
+});
