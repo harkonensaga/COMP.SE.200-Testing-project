@@ -1,30 +1,34 @@
 //const isLength = require("../src/isLength.js");
 import isLength from "../src/isLength.js";
+import { expect } from "chai"
 
-test("positive integer returns true", () => {
-    expect(isLength(5)).toBe(true);
-})
+describe("isLength tests", () => {
 
-test("negative integer returns false", () => {
-    expect(isLength(-1)).toBe(false);
-})
+    it("positive integer returns true", () => {
+        expect(isLength(5)).to.equal(true);
+    })
 
-test("infinity returns false", () => {
-    expect(isLength(Infinity)).toBe(false);
-})
+    it("negative integer returns false", () => {
+        expect(isLength(-1)).to.equal(false);
+    })
 
-test("whole number float returns true", () => {
-    expect(isLength(4.0)).toBe(true);
-})
+    it("infinity returns false", () => {
+        expect(isLength(Infinity)).to.equal(false);
+    })
 
-test("fractional float returns false", () => {
-    expect(isLength(4.1)).toBe(false);
-})
+    it("whole number float returns true", () => {
+        expect(isLength(4.0)).to.equal(true);
+    })
 
-test("string returns false", () => {
-    expect(isLength("5")).toBe(false);
-})
+    it("fractional float returns false", () => {
+        expect(isLength(4.1)).to.equal(false);
+    })
 
-test("max safe integer returns true", () => {
-    expect(isLength(9007199254740991)).toBe(true);
-})
+    it("string returns false", () => {
+        expect(isLength("5")).to.equal(false);
+    })
+
+    it("max safe integer returns true", () => {
+        expect(isLength(9007199254740991)).to.equal(true);
+    })
+});
