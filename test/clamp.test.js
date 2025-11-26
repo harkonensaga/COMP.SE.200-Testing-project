@@ -6,19 +6,19 @@ describe('clamp', () => {
         expect(clamp(5, 1, 10)).to.equal(5);
     });
 
-    it("Value within range", () => {
+    it("value within range", () => {
         expect(clamp(5, 1, 10)).to.equal(5);
     });
 
-    it("Value too large", () => {
+    it("value too large", () => {
         expect(clamp(999, 1, 10)).to.equal(10);
     });
 
-    it("Negative value", () => {
+    it("negative value", () => {
         expect(clamp(-5, 1, 10)).to.equal(1);
     });
 
-    it("Infinity", () => {
+    it("infinity", () => {
         expect(clamp(Infinity, 1, 10)).to.equal(10);
     });
 
@@ -26,11 +26,11 @@ describe('clamp', () => {
         expect(clamp(0, 5, 5)).to.equal(5);
     });
 
-    it("Negative size range", () => {
+    it("negative size range", () => {
         expect(clamp(0, 10, 1)).to.equal(null);
     });
 
-    it("Negative size range 2", () => {
+    it("negative size range 2", () => {
         expect(clamp(20, 10, 1)).to.equal(null);
     });
 });
