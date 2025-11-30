@@ -5,13 +5,17 @@ import toString from "../src/toString.js";
 * This is a test file for toString.js.
 * Tester: Olivia Härkönen
 */
-describe("Test toString", () => {
+describe("toString", () => {
     it("null value", () => {
         expect(toString(null)).to.eq("");
     });
     
     it("zero", () => {
         expect(toString(0)).to.eq("0");
+    });
+
+    it("plus zero", () => {
+        expect(toString(+0)).to.eq("+0");
     });
 
     it("minus zero", () => {
@@ -28,9 +32,6 @@ describe("Test toString", () => {
 
     it("infinity", () => {
         expect(toString(Infinity)).to.eq("Infinity");
-    });
-
-    it("negative infinity", () => {
         expect(toString(-Infinity)).to.eq("-Infinity");
     });
 
@@ -48,5 +49,9 @@ describe("Test toString", () => {
 
     it("symbol", () => {
         expect(toString(Symbol.iterator)).to.eq("Symbol(Symbol.iterator)");
+    });
+
+    it("array with undefined", () => {
+        expect(toString([undefined])).to.eq("undefined");
     });
 });

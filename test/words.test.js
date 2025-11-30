@@ -7,7 +7,6 @@ import words from "../src/words.js";
 */
 describe("words", () => {
     it("splits words without special characters", () => {
-        
         expect(words("Marley & me")).to.eql(["Marley", "me"]);
     });
 
