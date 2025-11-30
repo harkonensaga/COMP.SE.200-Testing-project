@@ -7,11 +7,11 @@ file in this <functionName>AI.test.js file and aime to cover:
 Please write the tests approximately in this format shown as example:
 describe('<functionName>AI', () => {
     it('<very short description of first test>', () => {
-        expect(<functionName>(<parameter>)).to.equal(<parameter>);
+        expect(<functionName>(<parameter>)).to.eq(<parameter>);
     });
 
     it('<very short description of second test>', () => {
-        expect(<functionName>(<parameter>)).to.equal(<parameter>);
+        expect(<functionName>(<parameter>)).to.eq(<parameter>);
     });
 });
 
