@@ -46,11 +46,19 @@ describe('toInteger', () => {
         expect(toInteger([5])).to.equal(5);
     });
     
-    /*it('array with multiple integers', () => {
-        expect(toInteger([5, 12, 8])).to.equal(null);
-    });*/
-    
     it('array with string', () => {
         expect(toInteger(["5"])).to.equal(5);
+    });
+
+    it('null -> error', () => {
+        expect(() => {toInteger(null);}).to.throw(Error);
+    });
+
+    it('NaN -> error', () => {
+        expect(() => {toInteger(NaN);}).to.throw(Error);
+    });
+
+    it('array with multiple integers -> error', () => {
+        expect(() => {toInteger([5, 12, 8]);}).to.throw(Error);
     });
 });

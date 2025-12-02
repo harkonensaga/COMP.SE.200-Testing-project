@@ -41,4 +41,8 @@ describe('upperFirst', () => {
     it('integer -> error', () => {
         expect(() => {upperFirst(45);}).to.throw(Error);
     });
+        
+    it('null -> error', () => {
+        expect(() => {capitalize(null);}).to.throw(Error);
+    });
 });

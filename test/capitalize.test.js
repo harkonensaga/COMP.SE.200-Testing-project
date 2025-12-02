@@ -41,4 +41,8 @@ describe('capitalize', () => {
     it('integer -> error', () => {
         expect(() => {capitalize(45);}).to.throw(Error);
     });
+    
+    it('null -> error', () => {
+        expect(() => {capitalize(null);}).to.throw(Error);
+    });
 });
