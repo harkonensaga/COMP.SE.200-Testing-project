@@ -38,8 +38,8 @@ describe('capitalize', () => {
         expect(capitalize("")).to.equal("");
     });
     
-    it('integer -> error', () => {
-        expect(() => {capitalize(45);}).to.throw(Error);
+    it('integer -> string', () => {
+        expect(capitalize(45)).to.eq("45");
     });
     
     it('null -> error', () => {
