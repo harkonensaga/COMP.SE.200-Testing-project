@@ -1,6 +1,10 @@
 import { expect } from 'chai';
 import toInteger from "../src/toInteger.js";
 
+/*
+* Test file for toInteger.js.
+* Tester: Sampo Järvenpää
+*/
 describe('toInteger', () => {
     it('integer', () => {
         expect(toInteger(11)).to.equal(11);

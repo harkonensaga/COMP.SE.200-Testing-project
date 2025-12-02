@@ -1,7 +1,11 @@
 import { expect } from 'chai';
 import clamp from "../src/clamp.js";
 
-describe('clamp', () => {
+/*
+* Test file for clamp.js, based on the test functions written in the original test plan.
+* Tester: Sampo Järvenpää
+*/
+describe('clampPlanned', () => {
     it('value within range', () => {
         expect(clamp(5, 1, 10)).to.equal(5);
     });

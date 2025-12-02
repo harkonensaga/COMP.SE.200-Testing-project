@@ -1,7 +1,11 @@
 import { expect } from 'chai';
 import isLength from "../src/isLength.js";
 
-describe('isLength', () => {
+/*
+* Test file for isLength.js, based on the test functions written in the original test plan.
+* Tester: Sampo Järvenpää
+*/
+describe('isLengthPlanned', () => {
     it('positive integer returns true', () => {
         expect(isLength(5)).to.equal(true);
     });

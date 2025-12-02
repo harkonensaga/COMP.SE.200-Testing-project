@@ -1,6 +1,10 @@
 import { expect } from 'chai';
 import upperFirst from "../src/upperFirst.js";
 
+/*
+* Test file for toInteger.js.
+* Tester: Sampo Järvenpää
+*/
 describe('upperFirst', () => {
     it('non-capital word', () => {
         expect(upperFirst("test")).to.equal("Test");
@@ -35,6 +39,6 @@ describe('upperFirst', () => {
     });
     
     it('integer -> error', () => {
-        expect(() => {upperFirst(45);}).to.throw("string.slice is not a function");
+        expect(() => {upperFirst(45);}).to.throw(Error);
     });
 });

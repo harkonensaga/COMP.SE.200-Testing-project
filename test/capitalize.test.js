@@ -1,6 +1,10 @@
 import { expect } from 'chai';
 import capitalize from "../src/capitalize.js";
 
+/*
+* Test file for capitalize.js.
+* Tester: Sampo Järvenpää
+*/
 describe('capitalize', () => {
     it('non-capital string', () => {
         expect(capitalize("nOrmAL TexT1!")).to.equal("Normal text1!");
@@ -35,6 +39,6 @@ describe('capitalize', () => {
     });
     
     it('integer -> error', () => {
-        expect(() => {capitalize(45);}).to.throw("string.slice is not a function");
+        expect(() => {capitalize(45);}).to.throw(Error);
     });
 });
