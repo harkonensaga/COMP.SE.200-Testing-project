@@ -50,8 +50,8 @@ describe('toInteger', () => {
         expect(toInteger(["5"])).to.equal(5);
     });
 
-    it('null -> error', () => {
-        expect(() => {toInteger(null);}).to.throw(Error);
+    it('null -> 0', () => {
+        expect(toInteger(null)).to.equal(0);
     });
 
     it('NaN -> error', () => {
