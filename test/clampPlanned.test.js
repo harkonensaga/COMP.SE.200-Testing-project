@@ -6,10 +6,6 @@ describe('clamp', () => {
         expect(clamp(5, 1, 10)).to.equal(5);
     });
 
-    it("value within range", () => {
-        expect(clamp(5, 1, 10)).to.equal(5);
-    });
-
     it("value too large", () => {
         expect(clamp(999, 1, 10)).to.equal(10);
     });
