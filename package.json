@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "mocha",
+    "localCoverage": "c8 mocha",
     "coverage": "c8 --reporter=lcov mocha"
   },
   "author": "",
