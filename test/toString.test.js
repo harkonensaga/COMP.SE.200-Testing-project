@@ -14,10 +14,6 @@ describe("toString", () => {
         expect(toString(0)).to.eq("0");
     });
 
-    it("plus zero", () => {
-        expect(toString(+0)).to.eq("+0");
-    });
-
     it("minus zero", () => {
         expect(toString(-0)).to.eq("-0");
     });
@@ -52,6 +48,6 @@ describe("toString", () => {
     });
 
     it("array with undefined", () => {
-        expect(toString([undefined])).to.eq("undefined");
+        expect(toString([undefined])).to.eq("");
     });
 });

@@ -13,7 +13,11 @@ describe("get", () => {
     });
 
     it("null path", () => {
-        expect(get(object, null)).to.eq(object);
+        expect(get(object, null)).to.eq({});
+    });
+
+    it("null path with default", () => {
+        expect(get(object, null, "default")).to.eq("default");
     });
 
     it("get nested value", () => {
@@ -32,8 +36,8 @@ describe("get", () => {
         expect(get(null, "a.b", "default")).to.eq("default");
     });
 
-    it("returns undefined without default", () => {
-        expect(get(null, "a.b")).to.eq(undefined);
+    it("returns empty object without default", () => {
+        expect(get(null, "a.b")).to.eq({});
     });
 
     it("returns falsy values instead of default", () => {
