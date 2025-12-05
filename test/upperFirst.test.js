@@ -43,6 +43,6 @@ describe('upperFirst', () => {
     });
         
     it('null -> error', () => {
-        expect(() => {capitalize(null);}).to.throw(Error);
+        expect(() => {upperFirst(null);}).to.throw(Error);
     });
 });
